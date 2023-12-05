@@ -1,0 +1,1493 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Barlow:wght@300&family=Kanit:wght@300&family=Michroma&family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap');
+
+*, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior:smooth;
+}
+
+:root {
+    /* MAIN COLOURS */
+    --color-1: #050505;
+    --color-2: #fc4b08;
+    --color-3: #ffffff;
+    --color-4: #c2c2c2;
+    --color-5: #434343;
+    --color-6: rgb(119, 6, 44);
+    --color-7: #db517f;
+    /* MAIN FONTS */
+    --font-h1: 'Bakbak One', sans-serif;
+    --font-h2: 'Kanit', sans-serif;
+    --font-h3: 'Roboto', sans-serif;
+    --font-h4: 'Roboto', sans-serif;
+    --font-p: "Inconsolata", monospace;
+    --font-button: 'Roboto', sans-serif;
+    --font-copyright: 'Michroma', sans-serif;
+}
+
+body {
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+    background: var(--color-1);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: var(--color-2);
+}
+
+body h1 {
+    font-size: 3.2rem;
+    font-family: var(--font-h1);
+}
+
+body h2 {
+    font-size: 2.2rem;
+    font-family: var(--font-h2);
+}
+
+body h3 {
+    font-family: var(--font-h3);
+    font-size: 1.5rem;
+}
+
+body h4 {
+    font-family: var(--font-h3);
+    font-size: 1.1rem;
+}
+
+body p {
+    font-size: 1rem;
+    font-family: var(--font-p);
+}
+
+.translate_container {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    padding: 10px 15px 0 0;
+    z-index: 500;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.translate_container button {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+}
+
+.translate_container button img {
+    width: 20px;
+    height: auto;
+}
+
+/**** ToolTip Languages Spanish ****/
+
+.btn_cr {
+    position: relative;
+}
+
+.btn_cr::before {
+    content: "Latin Spanish";
+    position: absolute;
+    width: 75px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    right: -100%;
+    bottom: -100%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: .3s;
+}
+
+.btn_cr:hover::before {
+    transform: scale(1.2);
+}
+
+/**** ToolTip Languages English ****/
+
+.btn_usa {
+    position: relative;
+}
+
+.btn_usa::before {
+    content: "English USA";
+    position: absolute;
+    width: 75px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    left: -150%;
+    bottom: -100%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: .3s;
+}
+
+.btn_usa:hover::before {
+    transform: scale(1.2);
+}
+
+.main_container {
+    position: absolute;
+    top: 0;
+    margin: 0 10px;
+    width: 95vw;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    gap: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: var(--color-1);
+}
+
+.top_info {
+    position: relative;
+    min-width: 300px;
+    width: 35%;
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+    border-left: 3px outset;
+}
+
+.top_info h1 {
+    color: var(--color-3);
+}
+
+.top_info span {
+    color: var(--color-2);
+}
+
+.btn_viewMore {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: 5px solid var(--color-2);
+    background: none;
+}
+
+.btn_viewMore #span1_btnViewMore {
+    width: auto;
+    height: 30px;
+    z-index: 1;
+    margin-left: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: var(--color-2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-button);
+}
+
+.btn_viewMore::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    background-color: var(--color-2);
+}
+
+.btn_viewMore:hover::before {
+    bottom: 0;
+    transition: .3s ease;
+}
+
+.btn_viewMore:hover #span1_btnViewMore {
+    color: var(--color-3);
+    transition: .3s ease;
+}
+
+/**** ANIMATE TEXT TOP HEADER  ****/
+
+.animate-text {
+    font-family: var(--font-p);
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+    text-align: left;
+  }
+  
+  /*Para simular el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
+  .animate-text::after {
+    content: "|";
+    font-size: 2.5rem;
+    font-family: var(--font-p);
+    animation-name: parpadeo;
+    animation-duration: 0.5s;
+    color: var(--color-2);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+/*Esta animación imita el parpadeo del cursor del teclado*/
+@keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+.picture_container {
+    position: relative;
+    min-width: 200px;
+    width: 350px;
+    min-height: 200px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+    border-right: 1px solid var(--color-4);
+    border-bottom: 1px solid var(--color-4);
+}
+
+.picture_container .picture_box {
+    position: relative;
+    min-width: 200px;
+    width: 320px;
+    min-height: 200px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--color-1);
+}
+
+.picture_container:hover {
+    border-right: 1px solid var(--color-2);
+    border-bottom: 1px solid var(--color-2);
+    transition: .3s;
+}
+
+.picture_container img {
+    width: 320px;
+    height: auto;
+}
+
+.nav {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 7px 7px -7px var(--color-2);
+    background-color: #050505ea;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+}
+
+.menu {
+    width:40vw;
+    height: 50vh;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu li {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu li a {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--font-h1);
+    font-size: 1.2rem;
+    position: relative;
+    color: var(--color-4);
+}
+
+.nav .menu li a.selected,
+.nav .menu li a:hover {
+    color: var(--color-2);
+    transition: 0.3s ease;
+}
+
+.open_menu,
+.close_menu {
+    display: none;
+}
+
+/**** Main content ****/
+
+main {
+    position: relative;
+    width: 94vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 35px 0;
+    min-height: calc(90vh - 70px);
+}
+
+.content .title_section {
+    width: 295px;
+    min-height: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title_section .underline {
+    width: 250px;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--color-2);
+}
+
+.content .title_section h1 {
+    color: var(--color-4);
+}
+
+.content .content_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 5px;
+}
+
+/**** ABOUT ****/
+
+.about_me {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.about_elements {
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about_elements .photo {
+    width: 300px;
+    height: auto;
+    min-height: 450px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.about_elements .photo img {
+    width: 430px;
+    height: auto;
+}
+
+.about_elements .resume_text {
+    width: auto;
+    max-width: 850px;
+    height: auto;
+    min-height: 250px;
+    margin: 0 15px;
+}
+
+.about_elements .resume_text h3 {
+    color: var(--color-4);
+    text-align: justify;
+}
+
+.btn_cv {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: 5px solid var(--color-2);
+    background: none;
+}
+
+.btn_cv #span1_btnCV {
+    width: 110px;
+    height: 30px;
+    z-index: 1;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: var(--color-2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-button);
+}
+
+.btn_cv #span2_btnCV {
+    width: 40px;
+    height: 30px;
+    z-index: 1;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.btn_cv::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    background-color: var(--color-2);
+}
+
+.btn_cv:hover::before {
+    bottom: 0;
+    transition: .3s ease;
+}
+
+.btn_cv:hover #span1_btnCV {
+    color: var(--color-3);
+    transition: .3s ease;
+}
+
+/**** SKILLS ****/
+
+.skills {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.skills .content_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills_elements {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frontend_skills,
+.backend_skills,
+.databases_skills,
+.version_control {
+    width: auto;
+    height: 50%;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.frontend_skills:hover,
+.backend_skills:hover,
+.databases_skills:hover {
+    transform: translateY(5px);
+    box-shadow: 0 0 5px var(--color-4);
+    transition: .3s;
+}
+
+
+/**** TABLES ****/
+
+table {
+    margin: 5px;
+    padding: 10px;
+    font-family: var(--font-h2);
+    font-size: 1.3rem;
+}
+
+table * h2 {
+    width: 300px;
+    color: var(--color-2);
+    border-bottom: 2px solid var(--color-3);
+}
+
+td {
+    margin: 10px 15px;
+    color: var(--color-3);
+}
+
+.td {
+    width: 130px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.tr_versionControl {
+    margin-top: 80px;
+}
+
+.level_skill {
+    width: 260px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_frontendSkills, 
+.table_backendSkills,
+.table_versionControl,
+.table_databasesSkills {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.level_skill > div {
+    width: 25%;
+    height: 20px;
+    border: 1px solid var(--color-3);
+}
+
+.level_skill :not(
+    /*FRONTEND*/
+    .bar4-html, 
+    .bar4-css3, 
+    .bar3-js, 
+    .bar4-js, 
+    .bar3-bootstrap, 
+    .bar4-bootstrap,
+    /*BACKEND*/
+    .bar3-nodejs,
+    .bar4-nodejs,
+    .bar3-expressjs,
+    .bar4-expressjs,
+    .bar3-mysql,
+    .bar4-mysql,
+    .bar3-sql,
+    .bar4-sql) {
+    background-color: var(--color-2);
+}
+
+/**** FRONTEND TABLE ****/
+
+.bar1-html, 
+.bar1-css3,
+.bar1-js,
+.bar1-bootstrap {
+    border-radius: 40px 0 0 40px;
+}
+
+.bar4-html,
+.bar4-css3,
+.bar4-js,
+.bar4-bootstrap {
+    border-radius: 0 40px 40px 0;
+}
+
+/**** BACKEND TABLE ****/
+
+.bar1-nodejs, 
+.bar1-expressjs,
+.bar1-mysql,
+.bar1-sql {
+    border-radius: 40px 0 0 40px;
+}
+
+.bar4-nodejs,
+.bar4-expressjs,
+.bar4-mysql,
+.bar4-sql {
+    border-radius: 0 40px 40px 0;
+}
+
+/**** ToolTip Level Beginner ****/
+
+.bar1-html,
+.bar1-css3,
+.bar1-js,
+.bar1-bootstrap,
+.bar1-nodejs,
+.bar1-expressjs,
+.bar1-mysql,
+.bar1-sql {
+    position: relative;
+}
+
+.bar1-html::before,
+.bar1-css3::before,
+.bar1-js::before,
+.bar1-bootstrap::before,
+.bar1-nodejs::before,
+.bar1-expressjs::before,
+.bar1-mysql::before,
+.bar1-sql::before {
+    content: "Beginner";
+    position: absolute;
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 120%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: .3s;
+}
+
+.bar1-html:hover::before,
+.bar1-css3:hover::before,
+.bar1-js:hover::before,
+.bar1-bootstrap:hover::before,
+.bar1-nodejs:hover::before,
+.bar1-expressjs:hover::before,
+.bar1-mysql:hover::before,
+.bar1-sql:hover::before {
+    transform: scale(1.2);
+}
+
+/**** ToolTip Level Middle ****/
+
+.bar2-html,
+.bar2-css3,
+.bar2-js,
+.bar2-bootstrap,
+.bar2-nodejs,
+.bar2-expressjs,
+.bar2-mysql,
+.bar2-sql {
+    position: relative;
+}
+
+.bar2-html::before,
+.bar2-css3::before,
+.bar2-js::before,
+.bar2-bootstrap::before,
+.bar2-nodejs::before,
+.bar2-expressjs::before,
+.bar2-mysql::before,
+.bar2-sql::before {
+    content: "Middle";
+    position: absolute;
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 120%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: .3s;
+}
+
+.bar2-html:hover::before,
+.bar2-css3:hover::before,
+.bar2-js:hover::before,
+.bar2-bootstrap:hover::before,
+.bar2-nodejs:hover::before,
+.bar2-expressjs:hover::before,
+.bar2-mysql:hover::before,
+.bar2-sql:hover::before {
+    transform: scale(1.2);
+}
+
+/**** ToolTip Level Advanced ****/
+
+.bar3-html,
+.bar3-css3,
+.bar3-js,
+.bar3-bootstrap,
+.bar3-nodejs,
+.bar3-expressjs,
+.bar3-mysql,
+.bar3-sql {
+    position: relative;
+}
+
+.bar3-html::before,
+.bar3-css3::before,
+.bar3-js::before,
+.bar3-bootstrap::before,
+.bar3-nodejs::before,
+.bar3-expressjs::before,
+.bar3-mysql::before,
+.bar3-sql::before {
+    content: "Advanced";
+    position: absolute;
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 120%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: .3s;
+}
+
+.bar3-html:hover::before,
+.bar3-css3:hover::before,
+.bar3-js:hover::before,
+.bar3-bootstrap:hover::before,
+.bar3-nodejs:hover::before,
+.bar3-expressjs:hover::before,
+.bar3-mysql:hover::before,
+.bar3-sql:hover::before {
+    transform: scale(1.2);
+}
+
+/**** ToolTip Level Expert ****/
+
+.bar4-html,
+.bar4-css3,
+.bar4-js,
+.bar4-bootstrap,
+.bar4-nodejs,
+.bar4-expressjs,
+.bar4-mysql,
+.bar4-sql {
+    position: relative;
+}
+
+.bar4-html::before,
+.bar4-css3::before,
+.bar4-js::before,
+.bar4-bootstrap::before,
+.bar4-nodejs::before,
+.bar4-expressjs::before,
+.bar4-mysql::before,
+.bar4-sql::before {
+    content: "Expert";
+    position: absolute;
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 120%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: .3s;
+}
+
+.bar4-html:hover::before,
+.bar4-css3:hover::before,
+.bar4-js:hover::before,
+.bar4-bootstrap:hover::before,
+.bar4-nodejs:hover::before,
+.bar4-expressjs:hover::before,
+.bar4-mysql:hover::before,
+.bar4-sql:hover::before {
+    transform: scale(1.2);
+}
+
+/**** PROJECTS ****/
+
+.projects {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.projects_elements {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/**** CARDS ****/
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card p {
+    text-align:justify;
+}
+
+.card img {
+    width: 319px;
+    height: auto;
+}
+
+.card_details {
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    background-color: #c2c2c2b0;
+}
+
+.title_card {
+    width: 280px;
+    height: auto;
+    margin: 15px;
+}
+
+.info_card {
+    width: 280px;
+    height: 120px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tools {
+    width: 280px;
+    height: auto;
+    gap: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tools .title_tools {
+    width: 280px;
+    height: auto;
+    border-bottom: 1px solid var(--color-1);
+}
+
+.tools-icons {
+    width: 280px;
+    height: auto;
+    gap: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tools img {
+    width: 32px;
+    height: auto;
+}
+
+.links {
+    width: 280px;
+    height: auto;
+    display: flex;
+    gap: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.links img {
+    display: flex;
+    width: 32px;
+    height: auto;
+}
+
+.btn_linkedGitHub {
+    background: none;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_linkedGitHub:hover {
+    box-shadow: 0 0 8px var(--color-3);
+    transition: .3s;
+}
+
+.card:hover .card_details,
+.info_card,
+.tools,
+.links {
+    height: 320px;
+    bottom: 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s ease;
+}
+
+
+/**** CONTACT ****/
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: calc(99vh - 45px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.contact .content_box {
+    width: 900px auto;
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.image_programmer {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_programmer img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.icons_container {
+    right: 50px;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    gap: 2.2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons_container button {
+    background: none;
+    border: none;
+}
+
+.button_sendMail {
+    animation-name: floating_icon_mail;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.button_linkedin {
+    animation-name: floating_icon_linkedin;
+    animation-duration: 1.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.icons_container button img {
+    width: 100px;
+    height: auto;
+}
+
+/**** ToolTip Social Network ****/
+
+.button_linkedin {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.button_linkedin:hover {
+    box-shadow: 0 0 5px var(--color-3);
+}
+
+.button_linkedin::before {
+    content: "LinkedIn";
+    position: absolute;
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    left: 125%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: .3s;
+}
+
+.button_linkedin:hover::before {
+    transform: scale(1.2);
+}
+
+.button_sendMail {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.button_sendMail:hover {
+    box-shadow: 0 0 5px var(--color-3);
+}
+
+.button_sendMail::before {
+    content: "Send Email";
+    position: absolute;
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    left: 125%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: .3s;
+}
+
+.button_sendMail:hover::before {
+    transform: scale(1.2);
+}
+
+/*Go Back Arrow Button to Home*/
+
+.go_back {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: floating_arrows;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating_arrows {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes floating_icon_mail {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(10px, 0px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes floating_icon_linkedin {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(20px, 0px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+/**** ToolTip Go Back ****/
+
+.link_goBack {
+    position: relative;
+}
+
+.link_goBack::before {
+    content: "Go Up";
+    position: absolute;
+    width: 60px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    right: -100%;
+    bottom: 40%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: left;
+    transition: .3s;
+}
+
+.link_goBack:hover::before {
+    transform: scale(1.2);
+}
+
+
+/**** FOOTER ****/
+
+.footer {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+
+.footer .copyright_content {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .copyright_content h4, #currentYear {
+    color: var(--color-4);
+    font-family: var(--font-copyright);
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width:1060px) {
+    
+    .menu {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        overflow-y: auto;
+        pointer-events: none;
+        flex-direction: column;
+        transition: opacity 0.4s;
+        width:100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #050505ea;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav .menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 260px;
+        height: auto;
+        margin: 10px 0;
+        line-height: 100px;
+    }
+
+    .nav .menu li a {
+        color: var(--color-4);
+        font-size: 3.2rem;
+    }
+
+     /*BOTONES MENU*/
+
+     .open_menu,
+     .close_menu {
+         display: block;
+         border: none;
+         background: none;
+         cursor: pointer;
+         margin-left: auto;
+     }
+ 
+     .close_menu {
+        width: auto;
+        height: auto;
+        position: sticky;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 35px;
+     }
+
+      /*FUNCION ABRIR Y CERRAR DEL MENU*/
+
+    .menu_opened {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .open_menu:focus:not(:focus-visible),
+    .close_menu:focus:not(:focus-visible) {
+        outline: none;      
+    }
+
+    .menu li a::after {
+        content: none;
+    }
+    
+    .menu li a:hover {
+        color: var(--color-2);
+        text-decoration: underline;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .contact .content_box {
+        width: 900px auto;
+        display: flex;
+        align-content: baseline;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /**** ToolTip Social Network ****/
+
+.link_linkedin {
+    position: relative;
+}
+
+.link_linkedin::before {
+    content: "LinkedIn";
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 110%;
+    left: -200%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: .3s;
+}
+
+.link_linkedin:hover::before {
+    transform: scale(1.2);
+}
+
+.link_whatsapp {
+    position: relative;
+}
+
+.link_whatsapp::before {
+    content: "WhatsApp";
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    bottom: 100%;
+    left: 100%;
+    font-family: var(--font-button);
+    font-size: 0.7rem;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    border-radius: .25rem;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: .3s;
+}
+
+.link_whatsapp:hover::before {
+    transform: scale(1.2);
+}
+}

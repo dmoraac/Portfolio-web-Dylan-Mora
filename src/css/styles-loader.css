@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Barlow:wght@300&family=Kanit:wght@300&family=Michroma&family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.loader_container {
+    background-color: #050505;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 950;
+    transition: all 1.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.word { 
+    font-family: var(--font-h1);
+    font-size: 4rem;
+    color: #fc4b08;
+    z-index: 9999;
+    line-height: 1.5em;
+    height: 1.5em;
+    padding: 0 14px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+  
+.word:before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
+    background-color: #c2c2c2;
+}

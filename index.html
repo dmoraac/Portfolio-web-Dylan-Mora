@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Styles CSS-->
+    <link rel="stylesheet" href="/src/css/styles.css">        <!--Standar Styles-->
+    <link rel="stylesheet" href="/src/css/styles-loader.css"> <!--Preloader Styles-->
+    <link rel="stylesheet" href="/src/css/alertify.min.css" /><!--AlertifyJS Styles-->
+
+    <!--Scripts JS-->
+    <script src="/src/js/loader.js" defer></script>           <!--Preloader JS-->
+    <script src="/src/js/particles-config.js" defer></script> <!--Particles JS-->
+    <script src="/src/js/particles.min.js"></script>          <!--Particles JS-->
+    <script src="/src/js/app.js" defer></script>              <!--Settings JS-->
+    <script src="/src/js/alertify.min.js" defer></script>     <!--Libreria AlertiyJS-->
+    <script src="/src/js/sweetalert2@11.js" defer></script>   <!--Libreria SweetAlert-->
+
+
+    <title>Portfolio Web | Dylan Mora</title>
+</head>
+<body>
+    <div class="loader_container">
+        <div class="loader">
+            <div class="text__container">
+                <span class="word" id="word"></span>
+            </div>
+        </div>
+    </div>
+    <div class="translate_container">
+        <button class="btn_cr" onclick="translateToSpanish();" type="button"><img src="/src/img/costa-rica.png" alt="CR Icon"></button>
+        <button class="btn_usa" onclick="translateToEnglish();" type="button"><img src="/src/img/usa.png" alt="USA Icon"></button>
+    </div>
+    <div class="main_container">
+        <header id="home">
+            <div id="particles-js"></div>
+            <div class="top_info">
+                <div class="magic_box1"></div>
+                <h1>Hi,</h1>
+                <h1>I'm <span>Dylan</span></h1>
+                <h1 class="animate-text" id="animate-text">Systems Engineer</h1>
+                <a href="#about_me"><button class="btn_viewMore"><span id="span1_btnViewMore">About me...</span></button></a>
+                <div class="magic_box2"></div>
+            </div>
+            <div class="picture_container">
+                <div class="picture_box">
+                    <a href="#home"><img src="/src/img/picture.jpg" alt="Dylan picture"></a>
+                </div>
+            </div>
+        </header>
+        <nav class="nav">
+            <div class="logo">
+                <a href="#"><img src="/src/img/logo.png" alt="Logo"></a>
+            </div>
+            <button class="open_menu" aria-label="Open menu">
+                <img src="/src/img/open-menu.png" alt="Open menu">
+            </button>
+            <ul class="menu">
+                <button class="close_menu" aria-label="Close menu">
+                    <img src="/src/img/close-menu.png" alt="Close Menu">
+                </button>
+                <li><a href="#home" class="selected">Home</a></li>
+                <li><a href="#about_me">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="about_me" id="about_me">
+                <div class="content">
+                    <div class="title_section">
+                        <h1>ABOUT</h1>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="about_elements">
+                            <div class="photo">
+                                <img src="/src/img/img_dma.jpg" alt="Photografy">
+                            </div>
+                            <div class="resume_text">
+                                <h3>Hi, I'm Dylan Mora. Systems Engineer graduated from Fidélitas University 
+                                    in Costa Rica. My favorite professional interests are software and web 
+                                    application development and everything related to Computer Security. 
+                                    I like constant learning and updating myself on new technologies. 
+                                    <br></br>
+                                    I invite you to see my CV if you are interested in my work.
+                                    <br></br>
+                                    Thanks for your visit!</h3>
+                                <button class="btn_cv" onclick="downloadCVEnglish();"><span id="span1_btnCV">Resume</span><span id="span2_btnCV"><img src="/src/img/download.png" alt="Resume Download icon"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="skills" id="skills">
+                <div class="content">
+                    <div class="title_section">
+                        <h1>SKILLS</h1>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="skills_elements">
+                            <div class="frontend_skills">
+                                <table class="table_frontendSkills">
+                                    <thead>
+                                        <tr>
+                                            <th><h2>FRONTEND</h2></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/html5.png" alt="html5">HTML5</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-html"></div>
+                                                    <div class="bar2-html"></div>
+                                                    <div class="bar3-html"></div>
+                                                    <div class="bar4-html"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/css3.png" alt="CSS3">CSS3</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-css3"></div>
+                                                    <div class="bar2-css3"></div>
+                                                    <div class="bar3-css3"></div>
+                                                    <div class="bar4-css3"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/javascript.png" alt="Javascript">Javascript</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-js"></div>
+                                                    <div class="bar2-js"></div>
+                                                    <div class="bar3-js"></div>
+                                                    <div class="bar4-js"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/bootstrap.png" alt="Bootstrap">Bootstrap</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-bootstrap"></div>
+                                                    <div class="bar2-bootstrap"></div>
+                                                    <div class="bar3-bootstrap"></div>
+                                                    <div class="bar4-bootstrap"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                            <div class="backend_skills">
+                                <table class="table_backendSkills">
+                                    <thead>
+                                        <tr>
+                                            <th><h2>BACKEND</h2></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/nodeJS.png" alt="NodeJS">Node JS</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-nodejs"></div>
+                                                    <div class="bar2-nodejs"></div>
+                                                    <div class="bar3-nodejs"></div>
+                                                    <div class="bar4-nodejs"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/expressJS.png" alt="ExpressJS">Express JS</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-expressjs"></div>
+                                                    <div class="bar2-expressjs"></div>
+                                                    <div class="bar3-expressjs"></div>
+                                                    <div class="bar4-expressjs"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="tr_versionControl">
+                                            <th><h2>VERSION CONTROL</h2></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/git.png" alt="Git">Git</td>
+                                            <td class="td"><img src="/src/img/github.png" alt="GitHub">GitHub</td>
+                                    </tbody>
+                                    </tbody>
+                                </table>
+                                
+                            </div>   
+
+                            <div class="databases_skills">
+                                <table class="table_databasesSkills">
+                                    <thead>
+                                        <tr>
+                                            <th><h2>DATABASES</h2></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/oracle.png" alt="Oracle">Oracle</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-expressjs"></div>
+                                                    <div class="bar2-expressjs"></div>
+                                                    <div class="bar3-expressjs"></div>
+                                                    <div class="bar4-expressjs"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/mysql.png" alt="MySQL">MySQL</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-mysql"></div>
+                                                    <div class="bar2-mysql"></div>
+                                                    <div class="bar3-mysql"></div>
+                                                    <div class="bar4-mysql"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td"><img src="/src/img/sqlserver.png" alt="SQL Server">SQL Server</td>
+                                            <td>
+                                                <div class="level_skill">
+                                                    <div class="bar1-sql"></div>
+                                                    <div class="bar2-sql"></div>
+                                                    <div class="bar3-sql"></div>
+                                                    <div class="bar4-sql"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="projects" id="projects">
+                <div class="content">
+                    <div class="title_section">
+                        <h1>PROJECTS</h1>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="projects_elements">
+                            <!-- CARD 1 -->
+                            <div class="card">
+                                <img src="/src/img/UsersLogin.png" alt="Picture">
+                                <div class="card_details">
+                                    <div class="title_card">
+                                        <h3>Users Login</h3>
+                                    </div>
+                                    <div class="info_card">
+                                        <p>User authenticator and password with database connection in MySQL.
+                                        </p>
+                                    </div>
+                                    <div class="tools">
+                                        <div class="title_tools">
+                                            <h3>Used Tools:</h3>
+                                        </div>
+                                        <div class="tools-icons">
+                                            <img src="/src/img/expressJS.png" alt="Express JS icon" title="ExpressJS">
+                                            <img src="/src/img/css3-card.png" alt="CSS icon" title="CSS3">
+                                            <img src="/src/img/js-card.png" alt="JS icon" title="Javascript">
+                                            <img src="/src/img/nodeJS-card.png" alt="Node JS icon" title="NodeJS">
+                                            <img src="/src/img/mysql.png" alt="MySQL icon" title="MySQL">
+                                        </div>
+                                    </div>
+                                    <div class="links">
+                                        <h4>See code:</h4>
+                                        <button type="button" class="btn_linkedGitHub" onclick="projectCodeUsersLoguin()"><img src="/src/img/github-card.png" alt="GitHub"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 2 -->
+                            <div class="card">
+                                <img src="/src/img/WebInventory.png" alt="Picture">
+                                <div class="card_details">
+                                    <div class="title_card">
+                                        <h3>Web Inventory</h3>
+                                    </div>
+                                    <div class="info_card">
+                                        <p>CRUD system to manage entry and exit of products from an inventory connected to a MySQL database.
+                                        </p>
+                                    </div>
+                                    <div class="tools">
+                                        <div class="title_tools">
+                                            <h3>Used Tools:</h3>
+                                        </div>
+                                        <div class="tools-icons">
+                                            <img src="/src/img/expressJS.png" alt="Express JS icon" title="ExpressJS">
+                                            <img src="/src/img/css3-card.png" alt="CSS icon" title="CSS3">
+                                            <img src="/src/img/js-card.png" alt="JS icon" title="Javascript">
+                                            <img src="/src/img/nodeJS-card.png" alt="Node JS icon" title="NodeJS">
+                                            <img src="/src/img/mysql.png" alt="MySQL icon" title="MySQL">
+                                        </div>
+                                    </div>
+                                    <div class="links">
+                                        <h4>See code:</h4>
+                                        <button type="button" class="btn_linkedGitHub" onclick="projectCodeWebInventory()"><img src="/src/img/github-card.png" alt="GitHub"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 3 -->
+                            <div class="card">
+                                <img src="/src/img/BasicCalculator.png" alt="Picture">
+                                <div class="card_details">
+                                    <div class="title_card">
+                                        <h3>Basic Calculator</h3>
+                                    </div>
+                                    <div class="info_card">
+                                        <p>Basic mathematical operations calculator.
+                                        </p>
+                                    </div>
+                                    <div class="tools">
+                                        <div class="title_tools">
+                                            <h3>Used Tools:</h3>
+                                        </div>
+                                        <div class="tools-icons">
+                                            <img src="/src/img/html5-card.png" alt="Html icon" title="HTML5">
+                                            <img src="/src/img/css3-card.png" alt="CSS icon" title="CSS3">
+                                            <img src="/src/img/js-card.png" alt="JS icon" title="Javascript">
+                                        </div>
+                                    </div>
+                                    <div class="links">
+                                        <h4>See code:</h4>
+                                        <button type="button" class="btn_linkedGitHub" onclick="projectCodeBasicCalculator()"><img src="/src/img/github-card.png" alt="GitHub"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CARD 4 -->
+                            <div class="card">
+                                <img src="/src/img/DigitalClock.png" alt="Picture">
+                                <div class="card_details">
+                                    <div class="title_card">
+                                        <h3>Digital Clock</h3>
+                                    </div>
+                                    <div class="info_card">
+                                        <p>Digital clock and current system date.
+                                        </p>
+                                    </div>
+                                    <div class="tools">
+                                        <div class="title_tools">
+                                            <h3>Used Tools:</h3>
+                                        </div>
+                                        <div class="tools-icons">
+                                            <img src="/src/img/html5-card.png" alt="Html icon" title="HTML5">
+                                            <img src="/src/img/css3-card.png" alt="CSS icon" title="CSS3">
+                                            <img src="/src/img/js-card.png" alt="JS icon" title="Javascript">
+                                        </div>
+                                    </div>
+                                    <div class="links">
+                                        <h4>See code:</h4>
+                                        <button type="button" class="btn_linkedGitHub" onclick="projectCodeDigitalClock()"><img src="/src/img/github-card.png" alt="GitHub"></button>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- CARD 5 -->
+                             <div class="card">
+                                <img src="/src/img/portfolioWeb_DylanMora.png" alt="Picture">
+                                <div class="card_details">
+                                    <div class="title_card">
+                                        <h3>Portfolio Web</h3>
+                                    </div>
+                                    <div class="info_card">
+                                        <p>This web portfolio has a personalized design developed with the following tools...
+                                        </p>
+                                    </div>
+                                    <div class="tools">
+                                        <div class="title_tools">
+                                            <h3>Used Tools:</h3>
+                                        </div>
+                                        <div class="tools-icons">
+                                            <img src="/src/img/html5-card.png" alt="Html icon" title="HTML5">
+                                            <img src="/src/img/css3-card.png" alt="CSS icon" title="CSS3">
+                                            <img src="/src/img/js-card.png" alt="JS icon" title="Javascript">
+                                            <img src="/src/img/jquery.png" alt="jquery icon" title="JQuery">
+                                        </div>
+                                    </div>
+                                    <div class="links">
+                                        <h4>See code:</h4>
+                                        <button type="button" class="btn_linkedGitHub" onclick="projectCodePortfolioWeb()"><img src="/src/img/github-card.png" alt="GitHub"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="content">
+                    <div class="title_section">
+                        <h1>CONTACT</h1>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="content_box">
+                        <div class="image_programmer">
+                            <img src="/src/img/programmer.png" alt="image programmer">
+                        </div>
+                        <div class="icons_container">
+                            <button class="button_sendMail" onclick="linkedEmail()" type="button"><img src="/src/img/sendMessage.png" alt="send email image"></button>
+                            <button class="button_linkedin" onclick="linkedinLink()" type="button"><img src="/src/img/linkedin.png" alt="linkedin image"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="go_back">
+                    <a class="link_goBack" href="#home"><img src="/src/img/go_back.png" alt="Go Back To Top"></a>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="copyright_content">
+                    <h4>Dylan Mora | &#169; <span id="currentYear"></span></h4>
+                </div>
+            </footer>
+        </main>
+</div>
+</body>
+</html>
